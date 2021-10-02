@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : CollidableController
 {
 
     public float rotationSpeed;
     public float movementSpeed;
-    
+    public static float totalMass;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        totalMass = mass;
     }
 
     // Update is called once per frame
@@ -42,4 +42,6 @@ public class PlayerController : MonoBehaviour
         }
          
     }
+
+    
 }
