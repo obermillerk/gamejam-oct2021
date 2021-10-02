@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 
     public float rotationSpeed;
     public float movementSpeed;
+    
 
 
     // Start is called before the first frame update
@@ -26,9 +27,19 @@ public class PlayerController : MonoBehaviour
 
 
         if (Input.GetKey(KeyCode.A))
-            transform.Rotate(new Vector3(0,0,1) * rotationSpeed * Time.deltaTime);
+        {
+            var body = GetComponent<Rigidbody2D>();
+            body.AddTorque((rotationSpeed * Mathf.Deg2Rad) * body.inertia);
+            
+        }
+
+            
 
         if (Input.GetKey(KeyCode.D))
-            transform.Rotate(new Vector3(0, 0,-1) * rotationSpeed * Time.deltaTime);
+        {
+            var body = GetComponent<Rigidbody2D>();
+            body.AddTorque((-rotationSpeed * Mathf.Deg2Rad) * body.inertia);
+        }
+         
     }
 }

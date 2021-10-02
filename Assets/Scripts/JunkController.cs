@@ -10,7 +10,7 @@ public class JunkController : MonoBehaviour
     public float invincibilityTime = 1.0f;
     private float collisionTime = 0;
 
-    private void OnCollision(Collision other)
+    private void OnCollisionStay(Collision other)
     {
         Debug.Log(other.GetType());
         if (other.gameObject.tag == "Player")
