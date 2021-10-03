@@ -23,6 +23,6 @@ public class PlayerCamController : MonoBehaviour {
         var desired = Mathf.LerpUnclamped(baseOrthographicSize, 2 * baseOrthographicSize, sqrSpeed / 15);
         var newSize = Mathf.SmoothDamp(playerCam.m_Lens.OrthographicSize, desired, ref _zoomVel, smoothTime, maxSmoothVel);
         playerCam.m_Lens.OrthographicSize = newSize;
-        Debug.Log(newSize);
+        //Debug.Log(newSize);
     }
 }
