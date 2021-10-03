@@ -6,15 +6,14 @@ public class JunkController : CollidableController
 {
 
 
-    public int totalHealth;
+    
+    private bool exploding;
     private int currentHealth;
-    public float invincibilityTime = 1.0f;
-    private float collisionTime = 0;
-   // public GameObject explosion;
+    public int totalHealth;
+
     public Sprite damagedSprite;
     public Sprite destroyedSprite;
-    private bool exploding;
-
+    
 
     protected override void OnCollisionEnter2D(Collision2D other)
     {
@@ -33,7 +32,10 @@ public class JunkController : CollidableController
 
     public void TakeDamage(int damage)
     {
+        Debug.Log(gameObject.name + " has: " + currentHealth + " health!");
+        OnDamage();
         currentHealth -= damage;
+        Debug.Log(gameObject.name + " has: " + currentHealth + " health!");
         if(currentHealth <= 0 && !exploding)
         {
             Detach();
@@ -69,5 +71,10 @@ public class JunkController : CollidableController
     public virtual void Explode()
     {
         exploding = true;
+    }
+
+    virtual protected void OnDamage()
+    {
+
     }
 }

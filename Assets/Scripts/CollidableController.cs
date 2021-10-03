@@ -37,8 +37,9 @@ public class CollidableController : MonoBehaviour
             Rigidbody2D thisRigid = gameObject.GetComponent<Rigidbody2D>();
             Rigidbody2D otherRigid = other.gameObject.GetComponent<Rigidbody2D>();
             var differenceInMag = (otherRigid.velocity * otherCollidable.mass - thisRigid.velocity * mass).sqrMagnitude;
-            if (differenceInMag > 5f)
+            if (differenceInMag > 0f)
             {
+                Debug.Log(gameObject.name + " has dealt " + other.gameObject.name + " " + (int)mass/2 + " damage!");
                 otherCollidable.TakeDamage((int)mass/2); 
             }
             // if mass > other mass

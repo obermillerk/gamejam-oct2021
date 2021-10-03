@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 992234055366027013}
   - component: {fileID: 992234055366027014}
   - component: {fileID: 992234055366027015}
-  - component: {fileID: 992234055366027018}
+  - component: {fileID: -5033822996394576693}
   m_Layer: 0
   m_Name: TrashCan
   m_TagString: Junk
@@ -139,7 +139,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &992234055366027018
+--- !u!114 &-5033822996394576693
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,14 +148,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 992234055366027008}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e976352e01a12e4a9fde693b08bbd00, type: 3}
+  m_Script: {fileID: 11500000, guid: 52b060b2e1b1113439ee95a9188cacfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mass: 5
+  mass: 15
   attached: 0
-  root: {fileID: 0}
   totalHealth: 10
-  currentHealth: 0
   invincibilityTime: 1
-  explosion: {fileID: 1867996608157270172, guid: 447301d5b8f1c21429a2043620eeff1e, type: 3}
-  damagedSprite: {fileID: 21300000, guid: 874ee09d153b7904ca1e62efc016d349, type: 3}
+  damagedSprite: {fileID: 21300000, guid: 990c819d6e3b13f4b82aeea226fc1b0e, type: 3}
+  destroyedSprite: {fileID: 0}
+  contents:
+  - {fileID: 992234055366027008, guid: c01a56b94ca975447b013f352deb5a74, type: 3}
+  - {fileID: 992234055366027008, guid: c01a56b94ca975447b013f352deb5a74, type: 3}
+  explosion: {fileID: 0}
+  explosionDuration: 0.1
