@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExplosionController : MonoBehaviour
+public class ExplosiveController : JunkController
 {
 
-    public float explosionRadius;
-    public int damage;
+    public GameObject explosion;
+    public float explosionDuration = 0.1f;
 
     //when an explosive is destroyed -> create a circular hitbox with explosion rad and a sprite of explosion
     //destroy hit box quickly
@@ -24,4 +24,12 @@ public class ExplosionController : MonoBehaviour
     {
         
     }
+
+    override public void Explode()
+    {
+        base.Explode();
+        GameObject explosionTemp = Instantiate(explosion, transform.position, Quaternion.Euler(0, 0, 0));
+        Destroy(explosionTemp, explosionDuration);
+    }
+
 }

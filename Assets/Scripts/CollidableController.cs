@@ -11,7 +11,7 @@ public class CollidableController : MonoBehaviour
 
     protected List<CollidableController> children = new List<CollidableController>();
     
-    public CollidableController root;
+   // public CollidableController root;
 
     // Start is called before the first frame update
     void Start()
@@ -25,10 +25,11 @@ public class CollidableController : MonoBehaviour
         
     }
 
-    protected void OnCollisionEnter2D(Collision2D other)
+    protected virtual void OnCollisionEnter2D(Collision2D other)
     {
         //Debug.Log(other.GetType() + " Collision!");
         //Debug.Log("Total Mass of " + gameObject.name + " is: " + PlayerController.totalMass);
+        Debug.Log("InCollidable");
         if (other.gameObject.tag == "Junk")
         {
 
@@ -36,7 +37,7 @@ public class CollidableController : MonoBehaviour
             Rigidbody2D thisRigid = gameObject.GetComponent<Rigidbody2D>();
             Rigidbody2D otherRigid = other.gameObject.GetComponent<Rigidbody2D>();
             var differenceInMag = (otherRigid.velocity * otherCollidable.mass - thisRigid.velocity * mass).sqrMagnitude;
-            if (differenceInMag > 2f)
+            if (differenceInMag > 5f)
             {
                 otherCollidable.TakeDamage((int)mass/2); 
             }
@@ -57,7 +58,8 @@ public class CollidableController : MonoBehaviour
                 Debug.Log(gameObject.name + " has connected to " + other.gameObject.name + "!");
                 Debug.Log(gameObject.name + " has " + children.Count + " children!");
             }
-        }
+        } 
+        
 
 
 
