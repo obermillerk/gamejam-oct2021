@@ -9,7 +9,6 @@ public class StarController : MonoBehaviour {
         var particulate = GetComponentInChildren<ParticleSystem>();
         var particulateTransform = particulate.transform;
         var inFront = body.GetVector(body.velocity).normalized;
-        // Debug.Log(inFront.sqrMagnitude);
         if (inFront.sqrMagnitude == 0) inFront = new Vector2(0f, 1f);
 
         var cam = Camera.main;
@@ -22,18 +21,7 @@ public class StarController : MonoBehaviour {
         var viewWidth = rightPoint.x - leftPoint.x;
         var viewHeight = rightPoint.y - leftPoint.y;
 
-        // Debug.Log(viewWidth + ", " + viewHeight);
-
-        var collider = particulate.trigger.GetCollider(0) as BoxCollider;
-        // var collider = particulate.trigger.GetCollider(0) as SphereCollider;
-
         var radius = 0.6f * diagLength;
-
-        collider.size = new Vector3(viewWidth, viewHeight, 10);
-        // collider.radius = radius;
-        collider.transform.localPosition = body.GetPoint(centerPoint);
-        collider.transform.localRotation = Quaternion.Inverse(transform.rotation);
-        Debug.DrawLine((Vector2)collider.bounds.min, (Vector2)collider.bounds.max, Color.cyan, 0, false);
 
         var sh = particulate.shape;
         sh.radius = diagLength;
