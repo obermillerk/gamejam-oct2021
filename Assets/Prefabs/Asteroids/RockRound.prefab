@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f4ed45e213a72a4b8ecef82a1c58952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mass: 50
+  mass: 80
   attached: 0
   totalHealth: 3000
   damagedSprite: {fileID: 21300000, guid: a60a51f203ad0d443b20d5dbb07038b7, type: 3}
@@ -78,7 +78,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 89892d2ad5d74f441bdb7e4c25dec863, type: 3}
   - {fileID: 21300000, guid: dbfc2f4653ed8f441b290eb77f46fb8a, type: 3}
   - {fileID: 21300000, guid: ccd80a32ab333aa4d919fec6fab977e0, type: 3}
-  maxScale: 12
+  maxScale: 8
   minScale: 5
   maxSpeed: 1
   minSpeed: 1
@@ -99,7 +99,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.03}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.59
 --- !u!58 &1325515864085193513
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -115,7 +115,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.03}
   serializedVersion: 2
-  m_Radius: 0.41
+  m_Radius: 0.5
 --- !u!1 &1874411505509034652
 GameObject:
   m_ObjectHideFlags: 0
