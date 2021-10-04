@@ -6,7 +6,7 @@ public class AsteroidContoller : JunkController
 {
 
     public Sprite[] sprites;
-    private SpriteRenderer spriteRenderer;
+    
 
     public float maxScale;
     public float minScale;
@@ -29,9 +29,9 @@ public class AsteroidContoller : JunkController
         float scaleFactor = Random.Range(minScale, maxScale);
         gameObject.transform.localScale = new Vector3(scaleFactor, scaleFactor, 0);
         mass *= scaleFactor;
-        gameObject.AddComponent<SpriteRenderer>();
+      
         //select random sprite within range
-        GetComponent<SpriteRenderer>().sprite = sprites[Random.Range(0, sprites.Length)];
+        GetComponentInChildren<SpriteRenderer>().sprite = sprites[Random.Range(0, sprites.Length)];
         //select random velocity within range
         speed = Random.Range(minSpeed, maxSpeed);
         //select random angular velecity within range
