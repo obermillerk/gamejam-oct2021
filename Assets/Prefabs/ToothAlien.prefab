@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 992234055366027019}
   - component: {fileID: 992234055366027012}
-  - component: {fileID: 154750682783337173}
   - component: {fileID: 4262036673351520793}
   - component: {fileID: 5155486294318596168}
+  - component: {fileID: -8161702103204049096}
   m_Layer: 0
   m_Name: ToothAlien
   m_TagString: Junk
@@ -56,23 +56,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &154750682783337173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 992234055366027008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e976352e01a12e4a9fde693b08bbd00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mass: 20000
-  attached: 0
-  totalHealth: 2147483647
-  damagedSprite: {fileID: 0}
-  destroyedSprite: {fileID: 0}
 --- !u!58 &4262036673351520793
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -105,6 +88,25 @@ CircleCollider2D:
   m_Offset: {x: 0.02, y: 0.33}
   serializedVersion: 2
   m_Radius: 5.14
+--- !u!114 &-8161702103204049096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992234055366027008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1264e6adfbb8f7842be36e0655f5102e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mass: 10
+  attached: 0
+  totalHealth: 100
+  damagedSprite: {fileID: 0}
+  destroyedSprite: {fileID: 0}
+  cooldown: 1
+  dashSprite: {fileID: 21300000, guid: 75af2410bc432dd4ab414831d368bdf1, type: 3}
 --- !u!1 &3182456922603557603
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,7 +118,7 @@ GameObject:
   - component: {fileID: 7808184055130364903}
   - component: {fileID: 2135193115818958593}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,13 +131,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3182456922603557603}
-  m_LocalRotation: {x: 0, y: 0, z: 0.007504863, w: 0.99997187}
+  m_LocalRotation: {x: 0, y: 0, z: -0.32482547, w: 0.945774}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 992234055366027019}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.86}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -37.91}
 --- !u!212 &2135193115818958593
 SpriteRenderer:
   m_ObjectHideFlags: 0
