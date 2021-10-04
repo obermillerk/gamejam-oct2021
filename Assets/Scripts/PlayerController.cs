@@ -9,6 +9,8 @@ public class PlayerController : CollidableController
     public float movementSpeed;
     public float totalMass;
 
+    private readonly List<Collectible> m_carrying = new List<Collectible>(1);
+
 
     // Start is called before the first frame update
     void Start()
@@ -56,6 +58,31 @@ public class PlayerController : CollidableController
            // time += Time.deltaTime;
         }
 
+    }
+
+    void OnTriggerEnter2D(Collider2D other) {
+        var otherObject = other.gameObject;
+
+        TriggerCollectible(otherObject);
+        TriggerUsable(otherObject);
+    }
+
+    private void TriggerCollectible(GameObject otherObject) {
+        if (!otherObject.TryGetComponent(out Collectible collectible)) return;
+        m_carrying.Add(collectible);
+        collectible.CollectedBy(gameObject);
+    }
+
+    private void TriggerUsable(GameObject otherObject) {
+        if (!otherObject.TryGetComponent(out Usable usable) || usable.Use() || m_carrying.Count <= 0) return;
+            
+        foreach (var collected in m_carrying) {
+            if (!usable.UseWith(collected)) continue;
+            
+            collected.Use();
+            m_carrying.Remove(collected);
+            return;
+        }
     }
 
     
