@@ -34,16 +34,10 @@ public class CollidableController : MonoBehaviour
         {
 
             JunkController otherCollidable = other.gameObject.GetComponent<JunkController>();
-            Rigidbody2D thisRigid = gameObject.GetComponent<Rigidbody2D>();
-            Rigidbody2D otherRigid = other.gameObject.GetComponent<Rigidbody2D>();
-            var differenceInMag = (otherRigid.velocity * otherCollidable.mass - thisRigid.velocity * mass).sqrMagnitude;
-            if (differenceInMag > 0f)
-            {
-                Debug.Log(gameObject.name + " has dealt " + other.gameObject.name + " " + (int)mass/2 + " damage!");
-                otherCollidable.TakeDamage((int)mass/2); 
-            }
+
+            PlayerController player =  GameObject.FindWithTag("Player").GetComponent<PlayerController>();
             // if mass > other mass
-            if (attached && !otherCollidable.attached && PlayerController.totalMass >= otherCollidable.mass)
+            if (attached && !otherCollidable.attached && player.totalMass >= otherCollidable.mass)
             {
                 
                 FixedJoint2D fixedJoint = gameObject.AddComponent<FixedJoint2D>();
@@ -59,6 +53,14 @@ public class CollidableController : MonoBehaviour
                 Debug.Log(gameObject.name + " has connected to " + other.gameObject.name + "!");
                 Debug.Log(gameObject.name + " has " + children.Count + " children!");
             }
+            Rigidbody2D thisRigid = gameObject.GetComponent<Rigidbody2D>();
+            Rigidbody2D otherRigid = other.gameObject.GetComponent<Rigidbody2D>();
+            var differenceInMag = (otherRigid.velocity * otherCollidable.mass - thisRigid.velocity * mass).sqrMagnitude;
+            if (differenceInMag > 0f)
+            {
+                Debug.Log(gameObject.name + " has dealt " + other.gameObject.name + " " + (int)mass / 2 + " damage!");
+                otherCollidable.TakeDamage((int)mass / 2);
+            }
         } 
         
 
@@ -72,6 +74,10 @@ public class CollidableController : MonoBehaviour
 
     }
 
+    public bool IsAttached()
+    {
+        return attached;
+    }
     public void setMass(float newMass)
     {
         mass = newMass;
@@ -79,21 +85,22 @@ public class CollidableController : MonoBehaviour
 
     protected void Attach()
     {
+        PlayerController player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
         //GameController
-        PlayerController.totalMass += mass;
+        player.totalMass += mass;
 
         attached = true;
 
-        Debug.Log("Inside Attach: " + gameObject.name + ", Total Mass of Player is: " + PlayerController.totalMass);
+        Debug.Log("Inside Attach: " + gameObject.name + ", Total Mass of Player is: " + player.totalMass);
     }
 
     protected void Detach()
     {
-        
+        PlayerController player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
         //Debug.Log("Inside Detach for: " + gameObject.name);
         attached = false;
-        PlayerController.totalMass -= mass;
-        Debug.Log("Inside Detach: " + gameObject.name + ", Total Mass of Player is: " + PlayerController.totalMass);
+        player.totalMass -= mass;
+        Debug.Log("Inside Detach: " + gameObject.name + ", Total Mass of Player is: " + player.totalMass);
         while (children.Count > 0)
         //foreach (CollidableController cc in children)
         {
@@ -108,7 +115,8 @@ public class CollidableController : MonoBehaviour
 
     protected void DetachChildren()
     {
-        Debug.Log("Inside Detach Children: " + gameObject.name + ", Total Mass of Player is: " + PlayerController.totalMass);
+        PlayerController player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        Debug.Log("Inside Detach Children: " + gameObject.name + ", Total Mass of Player is: " + player.totalMass);
         while(children.Count > 0)
         //foreach (CollidableController cc in children)
         {

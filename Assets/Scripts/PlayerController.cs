@@ -7,10 +7,7 @@ public class PlayerController : CollidableController
 
     public float rotationSpeed;
     public float movementSpeed;
-    public static float totalMass;
-
-    private float cooldown = .5f;
-    private float time = 0f;
+    public float totalMass;
 
 
     // Start is called before the first frame update

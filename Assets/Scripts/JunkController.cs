@@ -32,13 +32,17 @@ public class JunkController : CollidableController
 
     public void TakeDamage(int damage)
     {
-        Debug.Log(gameObject.name + " has: " + currentHealth + " health!");
+        //Debug.Log(gameObject.name + " has: " + currentHealth + " health!");
         OnDamage();
         currentHealth -= damage;
         Debug.Log(gameObject.name + " has: " + currentHealth + " health!");
         if(currentHealth <= 0 && !exploding)
         {
-            Detach();
+            if (IsAttached())
+            {
+                Detach();
+            }
+            
             //explosion
             //GameObject explosionTemp = Instantiate(explosion, transform.position, Quaternion.Euler(0, 0, 0));
             gameObject.GetComponentInChildren<SpriteRenderer>().sprite = destroyedSprite;
