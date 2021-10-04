@@ -43,6 +43,8 @@ public class CollidableController : MonoBehaviour
                 FixedJoint2D fixedJoint = gameObject.AddComponent<FixedJoint2D>();
                 fixedJoint.enableCollision = false;
                 fixedJoint.connectedBody = other.rigidbody;
+                fixedJoint.dampingRatio = 1;
+                fixedJoint.breakForce = 10;
                 otherCollidable.Attach();
 
                 children.Add(otherCollidable);
