@@ -20,23 +20,22 @@ public class PlayerController : CollidableController
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
+        var body = GetComponent<Rigidbody2D>();
         if (Input.GetKey(KeyCode.W))
-            GetComponent<Rigidbody2D>().AddForce(transform.up * movementSpeed * Time.deltaTime);
+            body.AddForce(Vector2.up * movementSpeed * Time.deltaTime);
 
         if (Input.GetKey(KeyCode.S))
-            GetComponent<Rigidbody2D>().AddForce(transform.up * -movementSpeed * Time.deltaTime);
+            body.AddForce(Vector2.down * movementSpeed * Time.deltaTime);
 
         if (Input.GetKey(KeyCode.A))
-            GetComponent<Rigidbody2D>().AddForce(transform.right * -movementSpeed * Time.deltaTime);
+            body.AddForce(Vector2.left * movementSpeed * Time.deltaTime);
 
         if (Input.GetKey(KeyCode.D))
-            GetComponent<Rigidbody2D>().AddForce(transform.right * movementSpeed * Time.deltaTime);
+            body.AddForce(Vector2.right * movementSpeed * Time.deltaTime);
 
         if (Input.GetKey(KeyCode.Q))
         {
-            var body = GetComponent<Rigidbody2D>();
             body.AddTorque((rotationSpeed * Mathf.Deg2Rad) * body.inertia);
             
         }
@@ -45,7 +44,6 @@ public class PlayerController : CollidableController
 
         if (Input.GetKey(KeyCode.E))
         {
-            var body = GetComponent<Rigidbody2D>();
             body.AddTorque((-rotationSpeed * Mathf.Deg2Rad) * body.inertia);
         }
 
