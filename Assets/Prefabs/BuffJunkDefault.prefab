@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 992234055366027013}
   - component: {fileID: 992234055366027014}
   - component: {fileID: 992234055366027015}
-  - component: {fileID: -5033822996394576693}
   - component: {fileID: 3788698552617512429}
   m_Layer: 0
   m_Name: BuffJunkDefault
@@ -140,26 +139,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-5033822996394576693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 992234055366027008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52b060b2e1b1113439ee95a9188cacfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mass: 15
-  attached: 0
-  totalHealth: 10
-  damagedSprite: {fileID: 21300000, guid: 990c819d6e3b13f4b82aeea226fc1b0e, type: 3}
-  destroyedSprite: {fileID: 0}
-  contents:
-  - {fileID: 992234055366027008, guid: c01a56b94ca975447b013f352deb5a74, type: 3}
-  - {fileID: 992234055366027008, guid: c01a56b94ca975447b013f352deb5a74, type: 3}
 --- !u!114 &3788698552617512429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,3 +151,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7099ac329bc412d4db3b07b387587066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mass: 5
+  attached: 0
+  totalHealth: 400
+  damagedSprite: {fileID: 0}
+  destroyedSprite: {fileID: 0}
+  buff: 0
+  buffValue: 1000

@@ -4,15 +4,38 @@ using UnityEngine;
 
 public class BuffJunkController : JunkController
 {
-
+    public enum Buffs {
+        MOVESPEED, TURNSPEED
+    }
     //on attach do something
     //on detach, lose it
+    public Buffs buff;
+    public int buffValue;
 
-
-    // Start is called before the first frame update
-    void Start()
+    override protected void  OnAttach()
     {
+        PlayerController player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        if (buff == Buffs.MOVESPEED)
+        {
+            player.movementSpeed += buffValue;
+        } else
+        {
+            player.rotationSpeed += buffValue;
+        }
         
+    }
+
+    override protected void OnDetach()
+    {
+        PlayerController player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        if (buff == Buffs.MOVESPEED)
+        {
+            player.movementSpeed -= buffValue;
+        }
+        else
+        {
+            player.rotationSpeed -= buffValue;
+        }
     }
 
     // Update is called once per frame
