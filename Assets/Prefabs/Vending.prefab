@@ -68,13 +68,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e976352e01a12e4a9fde693b08bbd00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mass: 5
+  mass: 100
   attached: 0
-  root: {fileID: 0}
-  totalHealth: 0
-  invincibilityTime: 1
-  explosion: {fileID: 0}
+  totalHealth: 500
   damagedSprite: {fileID: 0}
+  destroyedSprite: {fileID: 0}
 --- !u!61 &234593523975345646
 BoxCollider2D:
   m_ObjectHideFlags: 0

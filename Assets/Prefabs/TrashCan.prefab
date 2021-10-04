@@ -49,7 +49,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 1
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.001
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -154,11 +154,8 @@ MonoBehaviour:
   mass: 15
   attached: 0
   totalHealth: 10
-  invincibilityTime: 1
   damagedSprite: {fileID: 21300000, guid: 990c819d6e3b13f4b82aeea226fc1b0e, type: 3}
   destroyedSprite: {fileID: 0}
   contents:
   - {fileID: 992234055366027008, guid: c01a56b94ca975447b013f352deb5a74, type: 3}
   - {fileID: 992234055366027008, guid: c01a56b94ca975447b013f352deb5a74, type: 3}
-  explosion: {fileID: 0}
-  explosionDuration: 0.1

@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 992234055366027019}
   - component: {fileID: 992234055366027012}
-  - component: {fileID: 992234055366027018}
   - component: {fileID: 8339751940474650577}
   - component: {fileID: 810745370698251191}
+  - component: {fileID: 2655145753785614423}
   m_Layer: 0
   m_Name: Mine
   m_TagString: Junk
@@ -56,25 +56,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &992234055366027018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 992234055366027008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e976352e01a12e4a9fde693b08bbd00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mass: 5
-  attached: 0
-  root: {fileID: 0}
-  totalHealth: 0
-  invincibilityTime: 1
-  explosion: {fileID: 0}
-  damagedSprite: {fileID: 0}
 --- !u!58 &8339751940474650577
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -88,9 +69,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.21, y: -0.06}
+  m_Offset: {x: 0.01, y: 0.06}
   serializedVersion: 2
-  m_Radius: 1.25
+  m_Radius: 1.31
 --- !u!58 &810745370698251191
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -104,9 +85,28 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.21, y: -0.06}
+  m_Offset: {x: 0.01, y: 0.06}
   serializedVersion: 2
   m_Radius: 1.1
+--- !u!114 &2655145753785614423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992234055366027008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c363eb01b83696c46b1a9b4bb00a2c97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mass: 20
+  attached: 0
+  totalHealth: 20
+  damagedSprite: {fileID: 0}
+  destroyedSprite: {fileID: 0}
+  explosion: {fileID: 4049538374282307250, guid: 25d584af40cc6504a8c53e66a1704d5c, type: 3}
+  explosionDuration: 0.1
 --- !u!1 &3182456922603557603
 GameObject:
   m_ObjectHideFlags: 0

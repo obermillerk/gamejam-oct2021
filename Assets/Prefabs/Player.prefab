@@ -4969,8 +4969,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mass: 10
   attached: 1
-  rotationSpeed: 10
-  movementSpeed: 100
+  rotationSpeed: 60
+  movementSpeed: 170
 --- !u!114 &2049313105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5012,8 +5012,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.34, y: -0.12}
-  m_Size: {x: 3.34, y: 5.37}
+  m_Offset: {x: 0.11, y: 0.36}
+  m_Size: {x: 3.89, y: 5.49}
   m_Direction: 0
 --- !u!70 &6086411081825493818
 CapsuleCollider2D:
@@ -5028,6 +5028,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.34, y: -0.12}
-  m_Size: {x: 2.92, y: 4.87}
+  m_Offset: {x: 0.11, y: 0.25}
+  m_Size: {x: 3.1, y: 5.07}
   m_Direction: 0

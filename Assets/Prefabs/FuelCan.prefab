@@ -68,13 +68,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e976352e01a12e4a9fde693b08bbd00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mass: 5
+  mass: 10
   attached: 0
-  root: {fileID: 0}
   totalHealth: 0
-  invincibilityTime: 1
-  explosion: {fileID: 0}
   damagedSprite: {fileID: 0}
+  destroyedSprite: {fileID: 0}
 --- !u!61 &234593523975345646
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -88,7 +86,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.18, y: -0.13}
+  m_Offset: {x: 0, y: 0.29}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -114,7 +112,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.18, y: -0.13}
+  m_Offset: {x: 0, y: 0.26}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}

@@ -68,13 +68,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e976352e01a12e4a9fde693b08bbd00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mass: 5
+  mass: 10
   attached: 0
-  root: {fileID: 0}
-  totalHealth: 0
-  invincibilityTime: 1
-  explosion: {fileID: 0}
+  totalHealth: 300
   damagedSprite: {fileID: 0}
+  destroyedSprite: {fileID: 0}
 --- !u!70 &5011041393920808127
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -88,7 +86,7 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.83, y: 0}
+  m_Offset: {x: 0.16, y: 0.21}
   m_Size: {x: 3.26, y: 5.72}
   m_Direction: 0
 --- !u!70 &7541808263303896228
@@ -104,7 +102,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.83, y: 0}
+  m_Offset: {x: 0.16, y: 0.21}
   m_Size: {x: 2.77, y: 5.09}
   m_Direction: 0
 --- !u!1 &3182456922603557603
