@@ -24,8 +24,9 @@ public class AsteroidContoller : JunkController
 
 
     // Start is called before the first frame update
-    void Start()
+    override protected void Start()
     {
+        base.Start();
         float scaleFactor = Random.Range(minScale, maxScale);
         gameObject.transform.localScale = new Vector3(scaleFactor, scaleFactor, 0);
         mass *= scaleFactor;

@@ -612,6 +612,10 @@ PrefabInstance:
       propertyPath: maxScale
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3563518675091936050, guid: f6f2f74225232eb4895a3a9a3b4cc78a, type: 3}
+      propertyPath: totalHealth
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 4373336942992875941, guid: f6f2f74225232eb4895a3a9a3b4cc78a, type: 3}
       propertyPath: m_Name
       value: LargeAsteroid

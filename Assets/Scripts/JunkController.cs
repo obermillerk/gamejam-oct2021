@@ -59,7 +59,7 @@ public class JunkController : CollidableController
   
 
     // Start is called before the first frame update
-    void Start()
+    virtual protected void Start()
     {
         exploding = false;
         currentHealth = totalHealth;
