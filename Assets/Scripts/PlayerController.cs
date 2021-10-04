@@ -48,14 +48,8 @@ public class PlayerController : CollidableController
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-           // if (time > cooldown)
-           // {
-
-                DetachChildren();
-           //     time = 0f;
-           // }
-
-           // time += Time.deltaTime;
+            FadeController fade = GameObject.FindWithTag("Fade").GetComponent<FadeController>();
+            fade.Fade();
         }
 
     }
@@ -65,6 +59,12 @@ public class PlayerController : CollidableController
 
         TriggerCollectible(otherObject);
         TriggerUsable(otherObject);
+
+        if (other.gameObject.tag == "Fetus")
+        {
+            FadeController fade = GameObject.FindWithTag("Fade").GetComponent<FadeController>();
+            fade.Fade();
+        }
     }
 
     private void TriggerCollectible(GameObject otherObject) {
