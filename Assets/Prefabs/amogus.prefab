@@ -70,7 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mass: 2
   attached: 0
-  totalHealth: 50
+  totalHealth: 100
   damagedSprite: {fileID: 21300000, guid: f476965a344821041b9033029f63ff58, type: 3}
   destroyedSprite: {fileID: 0}
 --- !u!61 &234593523975345646

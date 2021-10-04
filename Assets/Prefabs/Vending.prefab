@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 992234055366027019}
   - component: {fileID: 992234055366027012}
-  - component: {fileID: 992234055366027018}
+  - component: {fileID: 3187695514560842445}
   - component: {fileID: 234593523975345646}
   - component: {fileID: 967063616138551417}
   m_Layer: 0
@@ -56,7 +56,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &992234055366027018
+--- !u!114 &3187695514560842445
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,14 +65,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 992234055366027008}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e976352e01a12e4a9fde693b08bbd00, type: 3}
+  m_Script: {fileID: 11500000, guid: 52b060b2e1b1113439ee95a9188cacfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mass: 100
   attached: 0
-  totalHealth: 500
-  damagedSprite: {fileID: 0}
+  totalHealth: 300
+  damagedSprite: {fileID: 21300000, guid: 5a9c6cf714da23b4c9c43334bf216cd4, type: 3}
   destroyedSprite: {fileID: 0}
+  contents:
+  - {fileID: 992234055366027008, guid: d31a9b188c07849438b40c1bcdcbef73, type: 3}
+  - {fileID: 992234055366027008, guid: cef81adbf141ed84ca241385d300c3e4, type: 3}
+  - {fileID: 992234055366027008, guid: 2fc9921168c0c85459d4902cbecb32c8, type: 3}
+  - {fileID: 992234055366027008, guid: 2fc9921168c0c85459d4902cbecb32c8, type: 3}
+  - {fileID: 992234055366027008, guid: 1d9ddc3767747194d9af2100a331bb19, type: 3}
+  - {fileID: 992234055366027008, guid: cef81adbf141ed84ca241385d300c3e4, type: 3}
+  - {fileID: 992234055366027008, guid: 2fc9921168c0c85459d4902cbecb32c8, type: 3}
+  - {fileID: 992234055366027008, guid: cef81adbf141ed84ca241385d300c3e4, type: 3}
+  - {fileID: 992234055366027008, guid: c01a56b94ca975447b013f352deb5a74, type: 3}
+  - {fileID: 992234055366027008, guid: 8b5efb54e142e0747b57251aa3f39577, type: 3}
+  - {fileID: 992234055366027008, guid: d31a9b188c07849438b40c1bcdcbef73, type: 3}
 --- !u!61 &234593523975345646
 BoxCollider2D:
   m_ObjectHideFlags: 0

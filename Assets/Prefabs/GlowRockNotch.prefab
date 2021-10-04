@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 992234055366027019}
   - component: {fileID: 992234055366027012}
-  - component: {fileID: 992234055366027018}
+  - component: {fileID: 3169244004809578846}
   - component: {fileID: 3951435880932385010}
   - component: {fileID: 3909139116282120428}
   m_Layer: 0
@@ -56,7 +56,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &992234055366027018
+--- !u!114 &3169244004809578846
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,14 +65,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 992234055366027008}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e976352e01a12e4a9fde693b08bbd00, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f4ed45e213a72a4b8ecef82a1c58952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mass: 30
+  mass: 40
   attached: 0
-  totalHealth: 10
-  damagedSprite: {fileID: 21300000, guid: 874ee09d153b7904ca1e62efc016d349, type: 3}
+  totalHealth: 300
+  damagedSprite: {fileID: 21300000, guid: aa787129664bec2439a336bb50910c1e, type: 3}
   destroyedSprite: {fileID: 0}
+  sprites:
+  - {fileID: 21300000, guid: aa787129664bec2439a336bb50910c1e, type: 3}
+  maxScale: 5
+  minScale: 1
+  maxSpeed: 12
+  minSpeed: 0
+  maxAngularVelocity: 60
+  minAngularVelocity: -60
 --- !u!58 &3951435880932385010
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -71,16 +71,16 @@ MonoBehaviour:
   mass: 50
   attached: 0
   totalHealth: 300
-  damagedSprite: {fileID: 0}
+  damagedSprite: {fileID: 21300000, guid: 7ec89ef73e7a259478d298008f3b09bc, type: 3}
   destroyedSprite: {fileID: 0}
   sprites:
   - {fileID: 21300000, guid: 7ec89ef73e7a259478d298008f3b09bc, type: 3}
-  maxScale: 3
-  minScale: 0.5
-  maxSpeed: 4
+  maxScale: 12
+  minScale: 5
+  maxSpeed: 12
   minSpeed: 1
-  maxAngularVelocity: 100
-  minAngularVelocity: 20
+  maxAngularVelocity: 60
+  minAngularVelocity: -60
 --- !u!58 &6955255141893609161
 CircleCollider2D:
   m_ObjectHideFlags: 0
