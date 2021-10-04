@@ -26,6 +26,9 @@ public class AsteroidContoller : JunkController
     // Start is called before the first frame update
     void Start()
     {
+        float scaleFactor = Random.Range(minScale, maxScale);
+        gameObject.transform.localScale = new Vector3(scaleFactor, scaleFactor, 0);
+        mass *= scaleFactor;
         gameObject.AddComponent<SpriteRenderer>();
         //select random sprite within range
         GetComponent<SpriteRenderer>().sprite = sprites[Random.Range(0, sprites.Length)];

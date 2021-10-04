@@ -85,6 +85,7 @@ public class CollidableController : MonoBehaviour
 
     protected void Attach()
     {
+        OnAttach();
         PlayerController player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
         //GameController
         player.totalMass += mass;
@@ -94,8 +95,14 @@ public class CollidableController : MonoBehaviour
         Debug.Log("Inside Attach: " + gameObject.name + ", Total Mass of Player is: " + player.totalMass);
     }
 
+    virtual protected void OnAttach()
+    {
+        
+    }
+
     protected void Detach()
     {
+        OnDetach();
         PlayerController player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
         //Debug.Log("Inside Detach for: " + gameObject.name);
         attached = false;
@@ -110,6 +117,11 @@ public class CollidableController : MonoBehaviour
             children.Remove(children[0]);
         }
 
+
+    }
+
+    virtual protected void OnDetach()
+    {
 
     }
 
