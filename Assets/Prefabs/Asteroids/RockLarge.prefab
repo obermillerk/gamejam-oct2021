@@ -86,7 +86,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mass: 200
   attached: 0
-  totalHealth: 600
+  totalHealth: 6000
   damagedSprite: {fileID: 21300000, guid: d5411837613495e42acf30e315ae9727, type: 3}
   destroyedSprite: {fileID: 0}
   sprites:
@@ -96,7 +96,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ee5685f277c64a440a492d53023feb15, type: 3}
   maxScale: 3
   minScale: 1
-  maxSpeed: 6
+  maxSpeed: 1
   minSpeed: 0
   maxAngularVelocity: 60
   minAngularVelocity: -60
