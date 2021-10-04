@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 992234055366027019}
   - component: {fileID: 992234055366027012}
-  - component: {fileID: 3187695514560842445}
+  - component: {fileID: 154750682783337173}
   - component: {fileID: 4262036673351520793}
   - component: {fileID: 5155486294318596168}
   m_Layer: 0
-  m_Name: Eyelien
+  m_Name: Fetus
   m_TagString: Junk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 992234055366027008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.84, y: 0.28, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 8, y: 8, z: 1}
   m_Children:
   - {fileID: 7808184055130364903}
   m_Father: {fileID: 0}
@@ -56,7 +56,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3187695514560842445
+--- !u!114 &154750682783337173
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,26 +65,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 992234055366027008}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52b060b2e1b1113439ee95a9188cacfb, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e976352e01a12e4a9fde693b08bbd00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mass: 100
+  mass: 20000
   attached: 0
-  totalHealth: 300
-  damagedSprite: {fileID: 21300000, guid: c68c79db07344de48a6bf944f97fca90, type: 3}
+  totalHealth: 2147483647
+  damagedSprite: {fileID: 0}
   destroyedSprite: {fileID: 0}
-  contents:
-  - {fileID: 992234055366027008, guid: d31a9b188c07849438b40c1bcdcbef73, type: 3}
-  - {fileID: 992234055366027008, guid: cef81adbf141ed84ca241385d300c3e4, type: 3}
-  - {fileID: 992234055366027008, guid: 2fc9921168c0c85459d4902cbecb32c8, type: 3}
-  - {fileID: 992234055366027008, guid: 2fc9921168c0c85459d4902cbecb32c8, type: 3}
-  - {fileID: 992234055366027008, guid: 1d9ddc3767747194d9af2100a331bb19, type: 3}
-  - {fileID: 992234055366027008, guid: cef81adbf141ed84ca241385d300c3e4, type: 3}
-  - {fileID: 992234055366027008, guid: 2fc9921168c0c85459d4902cbecb32c8, type: 3}
-  - {fileID: 992234055366027008, guid: cef81adbf141ed84ca241385d300c3e4, type: 3}
-  - {fileID: 992234055366027008, guid: c01a56b94ca975447b013f352deb5a74, type: 3}
-  - {fileID: 992234055366027008, guid: 8b5efb54e142e0747b57251aa3f39577, type: 3}
-  - {fileID: 992234055366027008, guid: d31a9b188c07849438b40c1bcdcbef73, type: 3}
 --- !u!58 &4262036673351520793
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -98,9 +86,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.85, y: 0.83}
+  m_Offset: {x: 0.02, y: 0.33}
   serializedVersion: 2
-  m_Radius: 2.89
+  m_Radius: 5.6
 --- !u!58 &5155486294318596168
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -114,9 +102,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.85, y: 0.83}
+  m_Offset: {x: 0.02, y: 0.33}
   serializedVersion: 2
-  m_Radius: 2.47
+  m_Radius: 5.14
 --- !u!1 &3182456922603557603
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,12 +176,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c68c79db07344de48a6bf944f97fca90, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 52ad0ad7dedb6d84cb2b2c9e97b06099, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.45, y: 5.36}
+  m_Size: {x: 13.47, y: 12.83}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
