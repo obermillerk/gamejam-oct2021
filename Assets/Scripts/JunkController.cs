@@ -61,6 +61,7 @@ public class JunkController : CollidableController
     // Start is called before the first frame update
     virtual protected void Start()
     {
+        gameObject.transform.rotation = Quaternion.Euler(0, 0, Random.Range(0, 360));
         exploding = false;
         currentHealth = totalHealth;
     }
