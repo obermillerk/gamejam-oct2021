@@ -106,7 +106,7 @@ MonoBehaviour:
   damagedSprite: {fileID: 0}
   destroyedSprite: {fileID: 0}
   explosion: {fileID: 4049538374282307250, guid: 25d584af40cc6504a8c53e66a1704d5c, type: 3}
-  explosionDuration: 0.1
+  explosionDuration: 2
 --- !u!1 &3182456922603557603
 GameObject:
   m_ObjectHideFlags: 0

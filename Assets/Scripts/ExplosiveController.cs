@@ -6,7 +6,7 @@ public class ExplosiveController : JunkController
 {
 
     public GameObject explosion;
-    public float explosionDuration = 0.1f;
+    public float explosionDuration = 2.0f;
 
     //when an explosive is destroyed -> create a circular hitbox with explosion rad and a sprite of explosion
     //destroy hit box quickly
@@ -29,7 +29,10 @@ public class ExplosiveController : JunkController
     {
         base.Explode();
         GameObject explosionTemp = Instantiate(explosion, transform.position, Quaternion.Euler(0, 0, 0));
+        var force = explosionTemp.GetComponent<PointEffector2D>();
+        Destroy(force, .1f);
         Destroy(explosionTemp, explosionDuration);
+        
     }
 
 }
