@@ -10935,14 +10935,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -6798554773008304955, guid: 04e1f09002f6f16408e15f2800c2aaee, type: 3}
-      propertyPath: maxScale
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: -6798554773008304955, guid: 04e1f09002f6f16408e15f2800c2aaee, type: 3}
-      propertyPath: minScale
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 992234055366027008, guid: 04e1f09002f6f16408e15f2800c2aaee, type: 3}
       propertyPath: m_Name
       value: Fetus
@@ -10950,14 +10942,6 @@ PrefabInstance:
     - target: {fileID: 992234055366027019, guid: 04e1f09002f6f16408e15f2800c2aaee, type: 3}
       propertyPath: m_RootOrder
       value: 195
-      objectReference: {fileID: 0}
-    - target: {fileID: 992234055366027019, guid: 04e1f09002f6f16408e15f2800c2aaee, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 992234055366027019, guid: 04e1f09002f6f16408e15f2800c2aaee, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 992234055366027019, guid: 04e1f09002f6f16408e15f2800c2aaee, type: 3}
       propertyPath: m_LocalPosition.x
