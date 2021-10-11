@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 992234055366027019}
   - component: {fileID: 992234055366027012}
   - component: {fileID: 4262036673351520793}
-  - component: {fileID: 5155486294318596168}
-  - component: {fileID: -6798554773008304955}
+  - component: {fileID: 244756762}
   m_Layer: 0
   m_Name: Fetus
   m_TagString: Fetus
@@ -72,23 +71,7 @@ CircleCollider2D:
   m_Offset: {x: 0.02, y: 0.33}
   serializedVersion: 2
   m_Radius: 5.6
---- !u!58 &5155486294318596168
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 992234055366027008}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.02, y: 0.33}
-  serializedVersion: 2
-  m_Radius: 5.14
---- !u!114 &-6798554773008304955
+--- !u!114 &244756762
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,22 +80,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 992234055366027008}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f4ed45e213a72a4b8ecef82a1c58952, type: 3}
+  m_Script: {fileID: 11500000, guid: 66b20df5491a48b1acdd7cfebf50ee39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mass: 1e+14
-  attached: 0
-  totalHealth: 2147483647
-  damagedSprite: {fileID: 0}
-  destroyedSprite: {fileID: 0}
-  sprites:
-  - {fileID: 21300000, guid: 52ad0ad7dedb6d84cb2b2c9e97b06099, type: 3}
-  maxScale: 20
-  minScale: 20
-  maxSpeed: 0
-  minSpeed: 0
-  maxAngularVelocity: 30
-  minAngularVelocity: 30
 --- !u!1 &3182456922603557603
 GameObject:
   m_ObjectHideFlags: 0
